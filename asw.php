@@ -38,11 +38,6 @@ if(!isset($_SESSION[md5($_SERVER['HTTP_HOST'])]))
     else
         Login();
 
-if(get_magic_quotes_gpc()){
-foreach($_POST as $key=>$value){
-$_POST[$key] = stripslashes($value);
-}
-}
 echo '<!DOCTYPE HTML>
 <html dir="auto" lang="en-US">
 <head>
