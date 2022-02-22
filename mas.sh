@@ -1,6 +1,6 @@
 #!/bin/bash
 args=("$@")
-UHOME="/vhosts"
+UHOME="/httpdocs"
 FILE=$(pwd)"/"${args[0]}
 priv=$([ $(id -u) == 0 ] && echo " here we go..........." || echo " you must root to run this file :)")
 
