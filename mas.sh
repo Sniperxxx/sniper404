@@ -1,6 +1,6 @@
 #!/bin/bash
 args=("$@")
-UHOME="/httpdocs"
+UHOME="/var/www/vhosts"
 FILE=$(pwd)"/"${args[0]}
 priv=$([ $(id -u) == 0 ] && echo " here we go..........." || echo " you must root to run this file :)")
 
@@ -22,7 +22,7 @@ else
 _USERS="$(awk -F':' '{ if ( $3 >= 500 ) print $1 }' /etc/passwd)"
 for u in $_USERS
 do 
-   	_dir="${UHOME}/${u}/vhosts"
+   	_dir="${UHOME}/${u}/httpdocs"
    	if [ -d "$_dir" ] && [ $(id -u) == 0 ]
    	then
        	/bin/cp "$FILE" "$_dir"
